@@ -1,26 +1,22 @@
 import Foundation
 
 func BubbleSort<T: Comparable>(a:Array<T>) -> Array<T> {
-	if a.count <= 1 {
-		return a
+	var copy = a.copy()
+	if copy.count <= 1 {
+		return copy
 	}
 
-	func swap(a:Array<T>, index1:Int, index2:Int) {
-		let var1:T = a[index1]
-		let var2:T = a[index2]
-		a[index1] = var2
-		a[index2] = var1
-	}
 	for i in 0..(a.count-1) {
 		for index in 0..(a.count-i-1) {
-			let var1:T = a[index]
-			let var2:T = a[index + 1]
+			let var1:T = copy[index]
+			let var2:T = copy[index + 1]
 			if (var1 > var2) {
-				swap(a, index, index + 1)
+				copy[index] = var2
+				copy[index + 1] = var1
 			}
 		}
 	}
-	return a
+	return copy
 }
 
 BubbleSort(Int[]())
