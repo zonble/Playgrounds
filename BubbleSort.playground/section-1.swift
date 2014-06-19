@@ -21,10 +21,8 @@ func BubbleSort<T: Comparable>(a:Array<T>) -> Array<T> {
 
 BubbleSort(Int[]())
 BubbleSort([1])
-BubbleSort([1,2,3,4,5,6,7,8,9])
-BubbleSort([9,8,7,6,5,4,3,2,1])
-BubbleSort([5,3,7,8, 92131, 345,67, 6,44,3,2,121, 2342])
-
-
-
-
+BubbleSort([1, 2, 3, 4, 5, 6, 7, 8, 9])
+BubbleSort([9, 8, 7, 6, 5, 4, 3, 2, 1])
+BubbleSort([5, 3, 7, 8, 92131, 345, 67, 6, 44, 3, 2, 121, 2342])
+BubbleSort("z o n b l e".componentsSeparatedByString(" "))
+BubbleSort("a0 a1 a2 a3 a4 a8 a9 a7 a6 a5".componentsSeparatedByString(" "))
