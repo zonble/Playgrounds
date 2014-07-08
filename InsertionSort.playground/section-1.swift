@@ -1,12 +1,12 @@
 import Foundation
 
-func InsertionSort<T:Comparable>(a:Array<T>) -> Array<T> {
-	var n :Array<T> = Array<T>()
+func InsertionSort<T:Comparable>(a:[T]) -> Array<T> {
+	var n :[T] = [T]()
 	if a.count == 0 {
 		return n
 	}
 	n.append(a[0])
-	for item :T in a[1..a.count] {
+	for item :T in a[1..<a.count] {
 		let count = n.count
 		for i in 0...count {
 			if i == 0 {
@@ -29,7 +29,7 @@ func InsertionSort<T:Comparable>(a:Array<T>) -> Array<T> {
 	return n
 }
 
-InsertionSort(Int[]())
+InsertionSort([Int]())
 InsertionSort([1])
 InsertionSort([1, 2])
 InsertionSort([2, 1])

@@ -3,15 +3,26 @@
    version = "1.0">
    <Group
       location = "container:"
-      name = "Sorting">
-      <FileRef
-         location = "group:InsertionSort.playground">
-      </FileRef>
-      <FileRef
-         location = "group:BubbleSort.playground">
-      </FileRef>
-      <FileRef
-         location = "group:QuickSort.playground">
-      </FileRef>
+      name = "Playgrounds">
+      <Group
+         location = "container:"
+         name = "Sorting">
+         <FileRef
+            location = "group:InsertionSort.playground">
+         </FileRef>
+         <FileRef
+            location = "group:BubbleSort.playground">
+         </FileRef>
+         <FileRef
+            location = "group:QuickSort.playground">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Misc">
+         <FileRef
+            location = "group:Circle.playground">
+         </FileRef>
+      </Group>
    </Group>
 </Workspace>
