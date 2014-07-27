@@ -10,12 +10,10 @@ func mergeSort<T:Comparable>(list:[T]) -> [T] {
 		var (indexA, indexB) = (0, 0)
 		while indexA < arrayA.count && indexB < arrayB.count {
 			if arrayA[indexA] < arrayB[indexB] {
-				mergedArray.append(arrayA[indexA])
-				indexA++
+				mergedArray.append(arrayA[indexA]); indexA++
 			} else {
-				mergedArray.append(arrayB[indexB])
-				indexB++
-			}
+				mergedArray.append(arrayB[indexB]); indexB++
+			} 
 		}
 		if indexA >= arrayB.count {
 			mergedArray += Array(arrayB[indexB..<arrayB.count])

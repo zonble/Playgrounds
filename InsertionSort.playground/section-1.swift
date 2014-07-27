@@ -21,17 +21,17 @@ func findInsertionIndex<T:Comparable>(list:[T], n :T, low :Int, high :Int) -> In
 	}
 }
 
-func InsertionSort<T:Comparable>(a:[T]) -> Array<T> {
-	var n :[T] = [T]()
+func InsertionSort<T:Comparable>(a:[T]) -> [T] {
+	var sortedArray = [T]()
 	if a.count == 0 {
-		return n
+		return sortedArray
 	}
-	n.append(a[0])
+	sortedArray.append(a[0])
 	for item :T in a[1..<a.count] {
-		let index = findInsertionIndex(n, item, 0, n.count - 1)
-		n.insert(item, atIndex: index)
+		let index = findInsertionIndex(sortedArray, item, 0, sortedArray.count - 1)
+		sortedArray.insert(item, atIndex: index)
 	}
-	return n
+	return sortedArray
 }
 
 InsertionSort([Int]())

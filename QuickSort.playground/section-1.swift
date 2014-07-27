@@ -1,12 +1,12 @@
 import Foundation
 
-func QuickSort<T: Comparable>(a:Array<T>) -> Array<T> {
+func QuickSort<T: Comparable>(a :[T]) -> [T] {
 	if a.count == 0 {
-		return Array<T>()
+		return [T]()
 	}
-	var smaller = Array<T>()
-	var larger = Array<T>()
-	var equal = Array<T>()
+	var smaller = [T]()
+	var larger = [T]()
+	var equal = [T]()
 	let firstItem = a[0]
 
 	for anotherItem in a {
@@ -18,10 +18,10 @@ func QuickSort<T: Comparable>(a:Array<T>) -> Array<T> {
 			equal.append(anotherItem)
 		}
 	}
-	var result = Array<T>()
-	result.extend(QuickSort(smaller))
-	result.extend(equal)
-	result.extend(QuickSort(larger))
+	var result = [T]()
+	result += QuickSort(smaller)
+	result += equal
+	result += QuickSort(larger)
 	return result
 }
 
