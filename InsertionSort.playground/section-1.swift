@@ -1,5 +1,26 @@
 import Foundation
 
+func findInsertionIndex<T:Comparable>(list:[T], n :T, low :Int, high :Int) -> Int {
+	if list.count == 0 { return 0 }
+	if n < list[low] { return low }
+	if n > list[high] { return high + 1 }
+	if high - low == 1 {
+		if list[low] == n {
+			return low
+		}
+		return high
+	}
+	var mid = low + (high - low) / 2
+	if list[mid] == n {
+		return mid
+	}
+	else if list[mid] > n {
+		return findInsertionIndex(list, n, low, mid)
+	} else {
+		return findInsertionIndex(list, n, mid, high)
+	}
+}
+
 func InsertionSort<T:Comparable>(a:[T]) -> Array<T> {
 	var n :[T] = [T]()
 	if a.count == 0 {
@@ -7,24 +28,8 @@ func InsertionSort<T:Comparable>(a:[T]) -> Array<T> {
 	}
 	n.append(a[0])
 	for item :T in a[1..<a.count] {
-		let count = n.count
-		for i in 0...count {
-			if i == 0 {
-				if item < n[i] {
-					n.insert(item, atIndex: 0)
-					break
-				}
-			}
-			else if i == count {
-				n.append(item)
-			}
-			else {
-				if item > n[i-1] && item <= n[i] {
-					n.insert(item, atIndex: i)
-					break
-				}
-			}
-		}
+		let index = findInsertionIndex(n, item, 0, n.count - 1)
+		n.insert(item, atIndex: index)
 	}
 	return n
 }

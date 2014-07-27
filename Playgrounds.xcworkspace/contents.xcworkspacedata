@@ -16,12 +16,21 @@
          <FileRef
             location = "group:QuickSort.playground">
          </FileRef>
+         <FileRef
+            location = "group:MergeSort.playground">
+         </FileRef>
       </Group>
       <Group
          location = "container:"
          name = "Misc">
          <FileRef
             location = "group:Circle.playground">
+         </FileRef>
+         <FileRef
+            location = "group:Practice1.playground">
+         </FileRef>
+         <FileRef
+            location = "group:Euclidean.playground">
          </FileRef>
       </Group>
    </Group>

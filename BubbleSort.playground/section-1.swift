@@ -1,7 +1,7 @@
 import Foundation
 
 func BubbleSort<T: Comparable>(a:[T]) -> [T] {
-	var copy :[T] = [T](a)
+	var copy :[T] = a
 	if copy.count <= 1 {
 		return copy
 	}
