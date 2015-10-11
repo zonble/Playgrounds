@@ -7,7 +7,7 @@ func euclidean(a:Int, b:Int) -> Int {
 	if a % c  == 0 && b % c == 0 {
 		return c
 	}
-	return euclidean(b, c)
+	return euclidean(b, b: c)
 }
 
-euclidean(100, 75)
+euclidean(100, b: 75)
